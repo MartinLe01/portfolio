@@ -1,0 +1,16 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-blueberry: #243b8f; /* primary accent, buttons, section numbers */
+  --color-cream: #feefc7; /* mostly just bg color, text on primary */
+  --color-cream-tinted: #f5e2b0; /* cards */
+  --color-ink: #040316; /* text, box shadows, borders */
+
+  --shadow-neo-sm: 3px 3px 0px #040316;
+  --shadow-neo-md: 5px 5px 0px #040316;
+  --shadow-neo-md: 8px 8px 0px #040316;
+
+  --font-display: 'Syne', sans-serif;
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-sans: 'Inter', sans-serif;
+}
