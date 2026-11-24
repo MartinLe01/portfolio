@@ -8,12 +8,12 @@ const variationStyles: Record<buttonVariation, string> = {
   secondary:
     'bg-cream text-ink border-3 border-ink shadow-neo-sm transition ease-in-out hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-neo-md active:translate-x-[3px] active:translate-y-[3px] active:shadow-none',
   ghost:
-    'bg-cream-tinted border-3 border-cream-tinted transition ease-in-out hover:border-ink hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-ink hover:shadow-neo-sm active:translate-x-0.5 active:translate-y-0.5 active:shadow-none',
+    'bg-cream-tinted border-3 border-cream-tinted transition ease-in-out hover:border-ink hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-ink hover:shadow-neo-md active:translate-x-0.5 active:translate-y-0.5 active:shadow-none',
 };
 
 type ButtonProps = ComponentPropsWithoutRef<'button'> & {
   variant: buttonVariation;
-  children: string;
+  children: React.ReactNode;
 };
 
 export function Button({ children, variant, ...rest }: ButtonProps) {
@@ -29,7 +29,7 @@ export function Button({ children, variant, ...rest }: ButtonProps) {
 
 type ButtonLinkProps = ComponentPropsWithoutRef<'a'> & {
   variant: buttonVariation;
-  children: string;
+  children: React.ReactNode;
 };
 
 export function ButtonLink({ children, variant, ...rest }: ButtonLinkProps) {
