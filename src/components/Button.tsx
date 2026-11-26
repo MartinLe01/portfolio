@@ -20,7 +20,7 @@ export function Button({ children, variant, ...rest }: ButtonProps) {
   return (
     <button
       {...rest}
-      className={`${variationStyles[variant]} px-6 py-3 text-base inline-flex`}
+      className={`${variationStyles[variant]} px-4 py-2 md:px-6 md:py-3 text-base inline-flex`}
     >
       {children}
     </button>
@@ -36,7 +36,7 @@ export function ButtonLink({ children, variant, ...rest }: ButtonLinkProps) {
   return (
     <a
       {...rest}
-      className={`${variationStyles[variant]} px-6 py-3 text-base inline-flex`}
+      className={`${variationStyles[variant]} px-4 py-2 md:px-6 md:py-3 text-base inline-flex`}
     >
       {children}
     </a>
