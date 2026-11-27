@@ -12,27 +12,24 @@ function App() {
       <Card>
         <SectionHeading orderNum={1} title="ABOUT ME"></SectionHeading>
 
-        <ButtonLink variant="ghost">ButtonLink Ghost</ButtonLink>
-        <ButtonLink variant="icon">
-          <img
-            src={GitHubLogo}
-            alt="GitHub icon"
-            width="54
-          "
+        <div className="flex gap-4 items-center flex-wrap">
+          <ButtonLink variant="ghost">ButtonLink Ghost</ButtonLink>
+          <ButtonLink variant="icon">
+            <img src={GitHubLogo} alt="GitHub icon" className="w-10 md:w-12" />
+          </ButtonLink>
+          <Button variant="primary">Button</Button>
+
+          <Tag type="green">Open to work</Tag>
+          <Tag type="coral">Open to work</Tag>
+          <Tag type="default">Open to work</Tag>
+
+          <Badge
+            title="HTML"
+            badgeStyles="border-[#E34F26] bg-[#E88874] text-ink"
+            altText="HTML logo"
+            imgSource="https://upload.wikimedia.org/wikipedia/commons/3/38/HTML5_Badge.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
           />
-        </ButtonLink>
-        <Button variant="primary">Button</Button>
-
-        <Tag type="green">Open to work</Tag>
-        <Tag type="coral">Open to work</Tag>
-        <Tag type="default">Open to work</Tag>
-
-        <Badge
-          title="HTML"
-          badgeStyles="border-[#E34F26] bg-[#E88874] text-ink"
-          altText="HTML logo"
-          imgSource="https://upload.wikimedia.org/wikipedia/commons/3/38/HTML5_Badge.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
-        />
+        </div>
       </Card>
     </>
   );
