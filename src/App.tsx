@@ -3,6 +3,7 @@ import { Card } from './components/Card';
 import { SectionHeading } from './components/SectionHeading';
 import { Tag } from './components/Tag';
 import { Badge } from './components/Badge';
+import GitHubLogo from './assets/GitHub_logo_inverted.svg';
 import './App.css';
 
 function App() {
@@ -11,7 +12,15 @@ function App() {
       <Card>
         <SectionHeading orderNum={1} title="ABOUT ME"></SectionHeading>
 
-        <ButtonLink variant="ghost">ButtonLink</ButtonLink>
+        <ButtonLink variant="ghost">ButtonLink Ghost</ButtonLink>
+        <ButtonLink variant="icon">
+          <img
+            src={GitHubLogo}
+            alt="GitHub icon"
+            width="54
+          "
+          />
+        </ButtonLink>
         <Button variant="primary">Button</Button>
 
         <Tag type="green">Open to work</Tag>
