@@ -4,12 +4,32 @@ import { LanguageSwitch } from './LanguageSwitch';
 import menu from '../assets/Hamburger_menu.svg';
 import { useState } from 'react';
 
-const linkTitles: string[] = [
-  'Home',
-  'About-me',
-  'Projects',
-  'My-skills',
-  'Contact',
+type navlinkInfo = {
+  title: string;
+  icon: string;
+};
+
+const navlinks: navlinkInfo[] = [
+  {
+    title: 'Home',
+    icon: 'home',
+  },
+  {
+    title: 'About-me',
+    icon: 'person',
+  },
+  {
+    title: 'Projects',
+    icon: 'folder_code',
+  },
+  {
+    title: 'My-skills',
+    icon: 'stacks',
+  },
+  {
+    title: 'Contact',
+    icon: 'mail',
+  },
 ];
 
 export function MobileHeader() {
@@ -32,14 +52,17 @@ export function MobileHeader() {
 
       <nav
         inert={!isOpen}
-        className={`bg-cream-tinted p-5 border-b-3 border-ink absolute left-0 right-0 top-full transition-transform duration-300 ease-out motion-reduce:transition-none ${isOpen ? 'translate-y-0' : '-translate-y-full'}`}
+        className={`text-ink bg-cream-tinted p-5 border-b-3 border-ink absolute left-0 right-0 top-full transition-transform duration-300 ease-out motion-reduce:transition-none ${isOpen ? 'translate-y-0' : '-translate-y-full'}`}
       >
-        <ul className="flex flex-col gap-2 w-full font-heading">
-          {linkTitles.map((item) => {
+        <ul className="flex flex-col gap-2 w-full font-heading font-semibold">
+          {navlinks.map((item) => {
             return (
-              <li key={item}>
+              <li key={item.title} className="flex items-center">
                 <ButtonLink variant="navlink_ghost">
-                  {item.replaceAll('-', ' ')}
+                  <span className="material-symbols-outlined text-[32px]!">
+                    {item.icon}
+                  </span>
+                  {item.title.replaceAll('-', ' ')}
                 </ButtonLink>
               </li>
             );
