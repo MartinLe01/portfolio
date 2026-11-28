@@ -31,7 +31,8 @@ export function MobileHeader() {
       </div>
 
       <nav
-        className={`bg-cream-tinted p-5 border-b-3 border-ink absolute left-0 right-0 top-full transition-transform duration-300 ease-out ${isOpen ? 'translate-y-0' : '-translate-y-full'}`}
+        inert={!isOpen}
+        className={`bg-cream-tinted p-5 border-b-3 border-ink absolute left-0 right-0 top-full transition-transform duration-300 ease-out motion-reduce:transition-none ${isOpen ? 'translate-y-0' : '-translate-y-full'}`}
       >
         <ul className="flex flex-col gap-2 w-full font-heading">
           {linkTitles.map((item) => {
